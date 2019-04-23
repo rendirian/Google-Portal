@@ -26,13 +26,13 @@
       <div class="mid-class">
          <div class="art-right-w3ls">
             <h2>Sign In and Sign Up</h2>
-            <form action="#" method="post">
+            <form method="post" action="$PORTAL_ACTION$" name="login_form">
                <div class="main">
                   <div class="form-left-to-w3l">
-                     <input type="text" name="name" placeholder="Username" required="">
-                  </div>
+                     <input type="text" name="auth_user" placeholder="Username" required="">
+                  </div>                 
                   <div class="form-left-to-w3l ">
-                     <input type="password" name="password" placeholder="Password" required="">
+                     <input type="password" name="auth_pass" placeholder="Password" required="">
                      <div class="clear"></div>
                   </div>
                </div>
@@ -45,7 +45,8 @@
                </div>
                <div class="clear"></div>
                <div class="btnn">
-                  <button type="submit">Sign In</button>
+                  <input name="redirurl" type="hidden" value="$PORTAL_REDIRURL">
+                  <input type="submit" name="accept" value="SignIn">
                </div>
             </form>
             <div class="w3layouts_more-buttn">
